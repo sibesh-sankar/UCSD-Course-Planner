@@ -1,0 +1,250 @@
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 32px 80px;
+}
+
+/* ---------- Masthead ---------- */
+
+.masthead {
+  border-bottom: 3px solid var(--navy);
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.masthead-eyebrow {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.masthead-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.masthead h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 2.6rem;
+  color: var(--navy);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.gpa-badge {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  border: 1px solid var(--navy);
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+.gpa-value {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--navy);
+}
+
+.gpa-label {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  text-transform: lowercase;
+}
+
+/* ---------- Two-column layout ---------- */
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel h2,
+.schedule-section h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ---------- Eligible course list ---------- */
+
+.search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  background: var(--paper-raised);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.course-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.course-code {
+  font-weight: 600;
+  color: var(--navy);
+  margin-right: 10px;
+}
+
+.course-title {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.course-empty {
+  padding: 10px 0;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.add-button {
+  border: 1px solid var(--navy);
+  background: transparent;
+  color: var(--navy);
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.add-button:hover {
+  background: var(--navy);
+  color: var(--paper-raised);
+}
+
+/* ---------- Requirement progress ---------- */
+
+.requirement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.requirement-row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.requirement-name {
+  font-weight: 600;
+}
+
+.requirement-count {
+  font-family: var(--font-display);
+  color: var(--locked);
+}
+
+.requirement-count.is-complete {
+  color: var(--eligible);
+}
+
+.requirement-desc {
+  margin: 4px 0 8px;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.requirement-track {
+  height: 6px;
+  background: var(--rule);
+}
+
+.requirement-fill {
+  height: 100%;
+  background: var(--gold);
+}
+
+/* ---------- Schedule board ---------- */
+
+.quarter-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.quarter-column {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  padding: 16px;
+}
+
+.quarter-column-head {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--navy);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.quarter-units {
+  font-weight: 400;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.quarter-empty {
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 0.88rem;
+}
+
+.quarter-course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quarter-course {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--eligible-bg);
+  color: var(--eligible);
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.remove-button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 0 0 8px;
+}
